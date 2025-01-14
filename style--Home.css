@@ -1,0 +1,165 @@
+  * {
+  box-sizing: border-box;
+  }
+  body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  line-height: 2;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+  font-style: italic;
+}
+
+/* navbar styling */
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-color: #082B59;
+}
+
+nav li {
+  margin: 0 1rem 1rem 1rem;
+  font-size: 1.3rem;
+}
+
+/* max width on the image in pixels */
+nav .logo img {
+  max-width: 150px;
+}
+
+/* flex basis on the image container, li */
+nav .logo {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover {
+  color: #d98555;
+}
+
+/* establishes a white background */
+#main {
+  background-color: white;
+}
+#heroGrid {
+  margin: 0px 5%;
+  display: grid;
+  min-height: 500px;
+  height: 70vh;
+  background-color: yellow;
+}
+
+#heroGrid {
+  grid-template-areas: "MenuBike pour" "MenuBike beans";
+  grid-template-rows:75% 25%;
+  grid-template-columns: 75% 25%;
+}
+
+.heroGridArea { 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+#headline  {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0px 0px;
+  color: #59331d;
+  border-bottom: 9px solid #d98555;
+  background-color: rgb(242, 242, 242, 0.7);
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  z-index: 1;
+  padding: 20px
+}
+
+#MenuBike {
+  grid-area: MenuBike;
+  background-color: pink;
+  background-image: url(images/gulp-menu.jpg);
+  
+}
+
+#pour {
+  grid-area: pour;
+  background-color: green;
+  background-image: url(images/gulp-pouring-coffee-horizontal.jpg);
+}
+
+#beans {
+  grid-area: beans;
+  background-color: blue;
+  background-image: url(images/gulp-coffee-beans.jpg);
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+#copyContainer {
+  background-color: #082b59;
+  margin: 0px 5%;
+}
+
+p {
+  text-align: center;
+  font-size: larger;
+  color: #f2f2f2;
+  margin-left:  60px;
+  margin-right: 60px;
+}
+
+#copy h2{
+  text-align: center;
+  color: #082B59;
+}
+/* footer */
+footer {
+  color: #f2f2f2;
+  text-align: center;
+  border-top: 15px solid #d98555;
+  margin-top: 10px;
+  background-color: #082B59;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+footer a {
+  color: #f2f2f2;
+  font-size: 2rem;
+  display: block;
+  margin: 0 1rem 3rem 1rem;
+}
+/*Responsive Media Querries*/
+@media only screen and (max-width: 600px) {
+  #heroGrid {
+    grid-template-areas: "MenuBike pour" "MenuBike beans";
+    grid-template-rows:auto auto;
+    grid-template-columns: auto auto;
+  }
+}

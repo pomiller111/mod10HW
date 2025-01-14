@@ -1,0 +1,171 @@
+  * {
+  box-sizing: border-box;
+  }
+  body {
+  background-color: #082B59;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  line-height: 2;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0;
+  color: #f2f2f2;
+}
+p {
+  color: #f2f2f2;
+}
+/* make images flexible */
+img {
+  max-width: 100%;
+}
+a {
+  color: #D98555;
+}
+a:hover {
+  text-decoration: none;
+}
+header {
+  border-bottom: 35px solid white;
+}
+/* navbar styling */
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+nav li {
+  margin: 0 1rem 1rem 1rem;
+  font-size: 1.3rem;
+}
+/* max width on the image in pixels */
+nav .logo img {
+  max-width: 150px;
+}
+/* flex basis on the image container, li */
+nav .logo {
+  flex-basis: 100%;
+  text-align: center;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+nav a:hover {
+  color: #d98555;
+}
+/* establishes a white background */
+.main-bkgd {
+  background: white url(https://assets.codepen.io/6306176/gulp-bean-bkgd.jpg) repeat-x bottom;
+  padding-bottom: 300px;
+}
+/* sits inside of the white background, centered */
+#main {
+  margin: 0px 5%;
+  display: grid;
+  min-height: 500px;
+  background-color: #D98555;
+}
+#main {
+grid-template-areas: "headline EspressoPic"
+  "ArticlE ContactButton";
+  grid-template-rows: 75% 25%;
+  grid-template-columns: 60% 40%;
+}
+.container {
+  background-color:#131d26;
+  border-radius: 50px;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+/*headline Grid*/
+#headline {
+  grid-area: headline;
+  background-color: #082B59;
+}
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+p {
+  padding: 20px;
+}
+
+/*ContactButton*/
+#ContactButton {
+  grid-area: ContactButton;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  background-color: #59331D;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0;
+  color: #f2f2f2;
+  text-decoration: none;
+  border: 3px solid #59331d; 
+}
+.button:hover {
+  background-color: #f2f2f2;
+  color: #59331d;
+}
+
+/*EspressoPic Grid*/
+#EspressoPic {
+  grid-area: EspressoPic;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+}
+figcaption {
+  font-style: italic;
+  text-align: center;
+  font-size: large;
+}
+footer {
+  color: #f2f2f2;
+  text-align: center;
+  border-top: 15px solid #d98555;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+footer a {
+  color: #f2f2f2;
+  font-size: 2rem;
+  display: block;
+  margin: 0 1rem 3rem 1rem;
+}
+/*Responsive Media Querries*/
+@media only screen and (max-width: 600px) {
+  .headline {
+    position: static;
+    margin: 20px;
+  }
+  .container {
+    max-width: 90%;
+  }
+  #main {
+    grid-template-areas: "headline" "EspressoPic" "ArticlE" "ContactButton";
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr;
+  }
+}
